@@ -212,6 +212,12 @@ footer {
     width:auto;
     margin:0;
   }
+  
+  svg {
+    width:40%;
+    display:block;
+    margin:auto;
+  }
 
   header, section, footer {
     float:none;
