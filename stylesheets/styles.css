@@ -21,10 +21,12 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size:28px;
+  font-size:5.9vw;
+  text-align:center;
 }
 
 h2 {
+  font-size:3.0vh;
   color:#393939;
 }
 
@@ -55,6 +57,10 @@ a:hover small {
 .wrapper {
   width:860px;
   margin:0 auto;
+}
+
+.view {
+  text-align:center;
 }
 
 blockquote {
