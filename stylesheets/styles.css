@@ -246,6 +246,12 @@ footer {
     word-wrap:break-word;
   }
 
+  svg {
+    width:30%;
+    display:block;
+    margin:auto;
+  }
+
   header {
     padding:0;
   }
