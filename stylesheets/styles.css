@@ -213,7 +213,7 @@ footer {
     margin:0;
   }
   
-  svg {
+  #Layer_1 {
     width:40%;
     display:block;
     margin:auto;
@@ -252,7 +252,7 @@ footer {
     word-wrap:break-word;
   }
 
-  svg {
+  #Layer_1 {
     width:30%;
     display:block;
     margin:auto;
