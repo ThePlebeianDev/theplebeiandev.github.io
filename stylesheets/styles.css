@@ -283,6 +283,14 @@ footer {
   body {
     padding:15px;
   }
+  
+    h1 {
+    font-size:8.9vw;
+  }
+  
+  h3 {
+    font-size:6.0vw;
+  }
 
   header ul {
     width:99%;
