@@ -251,6 +251,14 @@ footer {
   body {
     word-wrap:break-word;
   }
+  
+  h1 {
+    font-size:6.9vw;
+  }
+  
+  h3 {
+    font-size:4.0vw;
+  }
 
   #Layer_1 {
     width:30%;
