@@ -1,5 +1,4 @@
 # ThePlebeianDev.Github.io
-  `/+yh
                                                                         `:sy:s/`
                                                                      `-oo-`+m:  
                                                                   .:sy/   .o-   
