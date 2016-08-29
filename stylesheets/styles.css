@@ -225,6 +225,10 @@ footer {
     display:block;
     margin:auto;
   }
+  
+   h3 {
+    font-size:3.0vw;
+  }
 
   header, section, footer {
     float:none;
