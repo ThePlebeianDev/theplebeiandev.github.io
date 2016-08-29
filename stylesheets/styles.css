@@ -122,6 +122,12 @@ header {
   -webkit-font-smoothing:subpixel-antialiased;
 }
 
+#Layer_1 {
+    width:80%;
+    display:block;
+    margin:auto;
+}
+
 header ul {
   list-style:none;
   height:40px;
