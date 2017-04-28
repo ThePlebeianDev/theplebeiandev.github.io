@@ -6,7 +6,7 @@ Plebeian:
 2. Someone of lower social rank trash
 
 example:
-"Keith doesn't know that == is different than ===, must mean he is a plebeian."
+"Keith doesn't know that == is different than ===, Keith is a plebeian."
 
 
 
