@@ -1,7 +1,7 @@
-title: Theplebeiandev.GitHub.io
-description: 
+title: The Plebeian Dev
+description: Blog for Digital Creative Daniel Adriano Sipos Convery
 google_analytics: 
-show_downloads: true
+show_downloads: false
 theme: jekyll-theme-minimal
 
 gems:
