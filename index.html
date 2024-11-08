@@ -22,6 +22,29 @@
             <p class="view"><a href="https://github.com/ThePlebeianDev">View My GitHub Profile</a></p>
         </header>
         <section>
+            <a href="#P_K_I"><h3>PKI and how Certificates protect networks</h3></a>
+            <h4>Nov 8th, 2024</h4>
+            <img src="bec.gif">
+            <p>Network certificates are an essential security measure that enables encrypted, trusted communication between devices on a network. By verifying the identity of users and devices, network certificates help ensure that only authorized individuals and systems can access sensitive resources, reducing the risk of cyberattacks and unauthorized access.</p>
+            <p>What Are Network Certificates?</p>
+            <p>Network certificates, also known as digital certificates, are digital files that confirm the identity of devices or users on a network. These certificates are issued by a trusted Certificate Authority (CA) and contain valuable information, including the public key of the entity being certified, as well as details about the entity&rsquo;s identity and the CA that issued the certificate. This information enables secure communication by providing a way to verify and encrypt connections between systems, like a client and server, or between two devices within a network.</p>
+            <p>How Network Certificates Work</p>
+            <p>Network certificates rely on Public Key Infrastructure (PKI), a framework that uses a pair of cryptographic keys, a public key, and a private key to secure data transmission. A straightforward way of looking at PKI is the mail service. A mailbox represents a public key. Anyone can send mail to that mailbox but only a person with the private key can view them.</p>
+            <p>A user or device requests a certificate from a CA, this can be called Certificate Issuance. Which verifies the identity of the requester. Once verified, the CA issues a certificate containing the requester&rsquo;s public key, among other details. You can view a CA as the post office from the example above. They are trusted source of issuing a mailbox and key, the Postal Office verifies each person&rsquo;s identity</p>
+            <p>When a device or user wants to access network resources, the system checks the certificate against a list of trusted certificates to ensure its valid and issued by a trusted CA. This validation step prevents unauthorized devices or users from accessing the network.</p>
+            <p>Once verified, the certificate allows encrypted communication using SSL/TLS (Secure Sockets Layer/Transport Layer Security) protocols, which protect data as it is transmitted over the network. This encryption ensures that sensitive data like passwords, financial information, and proprietary business data are secure from interception.</p>
+            <p>Certificates have an expiration date though and must be renewed periodically to maintain security and integrity. This makes sure that outdated or potentially compromised certificates are not used indefinitely, reinforcing security.</p>
+            <p>Why Network Certificates Are Essential for Security?</p>
+            <p>Network certificates validate identities, ensuring that only trusted users and devices access the network. This trust is pivotal in preventing unauthorized access that could compromise data and lead to breaches.</p>
+            <p>By encrypting communication between devices, certificates protect data from interception and tampering. This is essential when transmitting sensitive information, such as client data or proprietary business details.</p>
+            <p>In Man-in-the-Middle (MitM) attacks, attackers intercept communication between two systems to steal or alter data. Certificates help prevent these attacks by authenticating both parties in a connection, ensuring secure transmission.</p>
+            <p>Many industries have data protection regulations that require encrypted data transmission. Certificates enable encryption and help organizations meet these standards, avoiding penalties and demonstrating commitment to data security. Some of these regulations include HIPPA, SOX, GDPR, and PCI-DSS which mention protecting data in-transit.</p>
+            <p>Best Practices for Managing Network Certificates?</p>
+            <p>Always use a reputable Certificate Authority for certificate issuance to ensure certificates are reliable and widely recognized. Some recognized CA&rsquo;s would be DigiCert, Entrust, Global Sign, or for something free LetsEncrypt.</p>
+            <p>Expired certificates can disrupt network access, so implementing automated renewal processes ensures continuous security. Having dealt with this, I can tell you that taking the time to renew a certificate while customers are without access is stressful. Regularly auditing certificate usage and validity to identify any expired or unused certificates that could become security vulnerabilities.</p>
+            <p>Network certificates are a fundamental part of network security, providing authentication, encryption, and trust across network connections. By verifying user and device identities and encrypting communications, network certificates protect organizations from data breaches, cyberattacks, and unauthorized access. Implementing and maintaining a robust certificate management process is essential for safeguarding sensitive data and ensuring trusted interactions across the organization&rsquo;s network.</p>
+        </section>
+        <section>
             <a href="#B_E_C"><h3>Recognizing Business Email Compromise and it's risk</h3></a>
             <h4>Nov 5th, 2024</h4>
             <img src="bec.gif">
