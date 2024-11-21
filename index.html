@@ -22,6 +22,31 @@
             <p class="view"><a href="https://github.com/ThePlebeianDev">View My GitHub Profile</a></p>
         </header>
         <section>
+            <a href="#vm_hardening"><h3>Managing your tools: Tips of having a secure investigation envoirnment and hardening your virtual machines.</h3></a>
+            <h4>Nov 20th, 2024</h4>
+            <img src="screens.gif">
+            <p>When working on security incidents you will be analyzing sensitive data and interacting with potentially malicious novel software. A virtual machine (VM) is an excellent choice for this purpose due to its flexibility and security features. However, ensuring the VM is secure is critical to protect the host system and maintain the integrity of the investigation. I will show you some steps to secure a basic Linux VM for cyber investigations and some choices you need to consider. Ask yourself first and foremost.</p>
+            <p>What is a reliable and Secure Host Environment?</p>
+            <p>Before configuring the VM, ensure the host machine itself is secure. Consider using a robust, up-to-date operating system, enable full-disk encryption, and regularly apply security patches. This all sounds a lot easier said than done type of situation. Host-level security is crucial because a compromised host can jeopardize the VM's security. This means being able to quickly deploy and manage any virtual host.</p>
+            <p>For my day to day, I personally find Kali Linux to be especially helpful given all the investigation tools baked into the OS itself. Kali is also unique in that the base operating system images come configured with security measures such as rootless mode, forensics mode and support for encryption.</p>
+            <p>What&rsquo;s the right Virtualization Platform?</p>
+            <p>Choosing a trusted virtualization platform such as VMware, VirtualBox, or QEMU/KVM provides you with a robust community with vast knowledge on managing and deploying vm&rsquo;s. Always download the platform from its official website and verify its integrity using checksums or digital signatures. Ensure the virtualization software is updated to the latest version to protect yourself from known vulnerabilities.</p>
+            <p>Keeping a Minimal Linux Distribution</p>
+            <p>For a cyber investigation VM, use a minimal Linux distribution like Debian, Ubuntu Server, or parotOS. A minimal installation reduces the attack surface by excluding unnecessary services and software. That may be difficult since the OS&rsquo;s recommended here have hundreds if not thousands of tools included in them. The principal remains, keep things simple.</p>
+            <p>Harden your virtual machine</p>
+            <p>Review and disable services not required for the investigation. Tools like systemctl or chkconfig can help manage services. Enable some Firewall rules. Use iptables or ufw to block unnecessary incoming and outgoing traffic. Restrict access to only essential ports. Always remember to install security updates whenever you can. You can write a bash script to automatically update the VM using your distribution&rsquo;s package manager (e.g., apt or yum). Consider using automated tools like unattended-upgrades for critical updates. Implement AppArmor or SELinux: These tools enforce strict access control policies on processes and applications.</p>
+            <p>Network Hardening tips to consider</p>
+            <p>Configure the VM&rsquo;s network interface to NAT or host-only mode. Avoid bridging the VM directly to the host&rsquo;s network to limit exposure. Regularly take snapshots to preserve a clean state of the VM. This allows you to revert quickly if malware compromises the system. Disable shared folders or set them to read-only to prevent malicious files from affecting the host.</p>
+            <p>Encrypt Your Virtual Disks</p>
+            <p>When creating the VM, opt for encrypted virtual disks. This protects investigation data from unauthorized access if the VM files are compromised.</p>
+            <p>Deploy Investigation Tools in a Controlled Manner</p>
+            <p>Install only verified investigation tools from trusted sources. Consider using containers like Docker within the VM for running potentially dangerous software, providing an additional layer of isolation.</p>
+            <p>Log everything, all the time</p>
+            <p>Enable logging for the VM using tools like auditd or Syslog. Monitor logs regularly for unusual activities. Tools like fail2ban can help automate responses to repeated unauthorized access attempts.</p>
+            <p>Sandbox Environment when and where you can</p>
+            <p>If the investigation involves handling malware, deploy the VM in a sandboxed environment or use hypervisor-level isolation. Platforms like Firejail or Cuckoo Sandbox can help. Securing a Linux VM is essential for cyber investigations to ensure data integrity, protect the host system, and maintain operational confidentiality. When I need a free sandbox, I usually use any.run. Always be mindful of what samples you may be uploading; you never want to inadvertently expose private information or possible PII. By following these steps, investigators can create a reliable and secure virtual environment to carry out their work.</p>
+        </section>
+        <section>
             <a href="#P_K_I"><h3>PKI and how Certificates protect networks</h3></a>
             <h4>Nov 8th, 2024</h4>
             <img src="hacking-fast.webp">
