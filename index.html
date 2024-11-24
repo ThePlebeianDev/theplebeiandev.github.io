@@ -22,6 +22,30 @@
             <p class="view"><a href="https://github.com/ThePlebeianDev">View My GitHub Profile</a></p>
         </header>
         <section>
+            <a href="#azure_network_security"><h3>Creating Secure Networks in Your Azure Environment</h3></a>
+            <h4>Nov 24th, 2024</h4>
+            <img src="screens.gif">
+            <p>One of the most critical parts of secure azure VM&rsquo;s is making sure that your infrastructure is secure from outside threats. Luckily, Azure offers a ton of built-in tools and configurations to help secure your scalable network. By using these features, you will be able to protect the sensitive data you ingest, reduce attack surfaces, and ensure you are compliant with security standards. Here is how you would do that.</p>
+            <p>Design with security in mind from the get-go</p>
+            <p>Creating a well-designed network, let alone a virtual network (VNet) is quite the task. First off, VNets are isolated, logical networks within Azure that serve as the foundation of your environment. Within the VNet, you will want to segment things into subnets to bundle resources based on functionality and security requirements.</p>
+            <p>Enable Azure Bastion for secure remote access to VMs without exposing RDP or SSH ports to the internet. This eliminates the need for public IP addresses on VMs, reducing potential attack vectors.</p>
+            <p>Network Security Groups (NSGs) for your VNet Firewalling</p>
+            <p>NSGs act as virtual firewalls for your VNets and subnets, allowing you to control inbound and outbound traffic. Only allow traffic you want and block everything else. For example, you can configure rules to allow only HTTP/HTTPS traffic to a web server while denying all other inbound traffic. Ensure your NSGs follow the principle of least privilege. Regularly audit rules to remove outdated or overly permissive configurations that could expose your environment.</p>
+            <p>Using Azure Firewall or Web Application Firewall (WAF)</p>
+            <p>You can enhance protection by deploying Azure Firewall to filter traffic at the network perimeter. The network perimeter is where your internal network meets the external connections. Azure Firewall provides centralized policy management and advanced threat protection capabilities, such as URL filtering and deep packet inspection.</p>
+            <p>If your VMs host web applications, integrate Azure WAF to safeguard against common threats like SQL injection and cross-site scripting (XSS). Azure WAF can be enabled through Azure Front Door or Application Gateway, providing robust protection for web-facing workloads.</p>
+            <p>Implement Private Endpoints</p>
+            <p>Using Azure Private Link helps to create private endpoints for your resources. This ensures that traffic between VMs and Azure services like Storage or SQL Database remains within the Azure backbone network, effectively bypassing the public internet. When you eliminate public endpoints, you significantly reduce the attack surface of your environment.</p>
+            <p>Secure Communication with Encryption</p>
+            <p>Always encrypt data in transit using protocols like TLS 1.2 or higher. Configure Azure resources and VMs to use encrypted communication for all internal and external connections. For sensitive workloads, turn on Azure Disk Encryption to protect data at rest and use Key Vault to manage encryption keys securely. Don&rsquo;t forget to rotate your keys eventually as you don&rsquo;t want those to be stale and or, in the event of compromise, they are eventually cracked.</p>
+            <p>Monitoring and Incident Respond</p>
+            <p>Enable Azure Monitor and Azure Network Watcher to track network activity and identify anomalies. Using something like Azure Sentinel, Microsoft&rsquo;s cloud-native SIEM tool, to analyze logs and detect threats in real-time. You can also send network logs to a different SIEM tool, it doesn&rsquo;t matter, just make sure you are tracking those logs.</p>
+            <p>Deploy Azure DDoS Protection to defend against distributed denial-of-service attacks. The Standard tier provides these types of enhanced mitigation and application-layer protection necessary to cover all your monitoring and IR activities.</p>
+            <p>Testing Security and Review recommendations from Security Center</p>
+            <p>Performing regularly scheduled security assessments using Azure Security Center is a must. Its recommendations can guide you in improving your network security posture. Conduct penetration testing or simulated attack exercises to identify and address vulnerabilities.</p>
+            <p>If you review and implement these recommendations, you can build a robust and secure network for your Azure VM environment. Having a proactive approach to securing your Azure infrastructure ensures operational resilience and helps mitigate modern cyber threats and attack vectors.</p>
+        </section>
+        <section>
             <a href="#vm_hardening"><h3>Managing your tools: Tips of having a secure investigation envoirnment and hardening your virtual machines.</h3></a>
             <h4>Nov 20th, 2024</h4>
             <img src="screens.gif">
