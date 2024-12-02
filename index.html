@@ -22,6 +22,27 @@
             <p class="view"><a href="https://github.com/ThePlebeianDev">View My GitHub Profile</a></p>
         </header>
         <section>
+            <a href="#azure_network_security"><h3>Protecting From Email Impersonations: How SPC, DKIM, and DMARC Work</h3></a>
+            <h4>Dec 1st, 2024</h4>
+            <img src="email.gif">
+            <p>As ubiquitous as email is in today&rsquo;s day and age, it stands to be one of the older means of communication relative to the rise of the world wide web. This primes it for being one of the most sought-after targets from cyber threats, spam and phishing being the primary vectors for attack to organizations. Attackers are getting better at posing as organizations and hiding their true identities through email, and it will only get tougher with the rise of AI.</p>
+            <p>One way to start to combat this type of abuse is to use special DNS records to help identify legitimate, original and trustworthy sources of email are getting to those who we wish to reach out. In today&rsquo;s blog post, I will go into some detail as to what these records are and how they can help protect you and your organization from common email impersonations. First let&rsquo;s ask the simple but important question.</p>
+            <p>What Are DNS Records?</p>
+            <p>Email DNS records are DNS (Domain Name System) configuration files that help authenticate email messages. They serve as the digital verification system. They can help provide information like which servers are authorized to send emails on behalf of your domain or if the email is digitally signed through PKI (Public Key Infrastructure). Without these records, bad actors can easily spoof emails, impersonating trusted vendors or folks within the org to deceive end users.</p>
+            <p>So What Records Should I Have to Make Our Email is Secure?</p>
+            <p>SPF (Sender Policy Framework) records indicate which mail servers are authorized to send emails for a domain. When an email is sent, the receiving mail server checks the SPF record to confirm whether the email originated from an approved server. If the sender isn't listed, the email may be marked as spam or rejected.</p>
+            <p>DKIM (DomainKeys Identified Mail) adds a digital cryptographic signature to emails, ensuring its contents haven&rsquo;t been tampered with during transmission. With the cryptographic keys, the sender&rsquo;s domain publishes the public key in its DNS, and the private key (used by the user sending the email) is leveraged to sign outgoing messages. The recipient&rsquo;s server verifies the signature which ensures the email is authentic.</p>
+            <p>DMARC (Domain-based Message Authentication, Reporting, and Conformance) builds on SPF and DKIM by specifying what action a receiving server should take when an email fails authentication. For example, the domain owner can choose to reject, quarantine, or monitor emails that don&rsquo;t pass SPF or DKIM checks. DMARC also provides reports, helping domain owners understand and mitigate unauthorized email activity. So, we know the three most important records for protecting your email but what does this look like in action?</p>
+            <p>How These Records Protect Against Phishing and Spam</p>
+            <p>Phishing attacks often rely on email spoofing, where attackers forge the &quot;From&quot; address to appear as a trusted sender. Email records like SPF and DKIM help detect and block spoofed messages, making it harder for attackers to impersonate legitimate senders.</p>
+            <p>DKIM makes sure that the content of an email remains unchanged during its transit. This prevents attackers from intercepting and altering legitimate emails to insert malicious links or attachments.</p>
+            <p>Implementing email records not only reduces spam but also boosts your domain's reputation with big email providers. Emails from domains with proper authentication are less likely to be flagged as spam, ensuring legitimate communications reach their intended recipients.</p>
+            <p>DMARC reports provide valuable insights into unauthorized email activity, helping organizations fine-tune their email security policies and detect malicious actors targeting their domain. With this, you can take a proactive approach and flag and report domains that are being used in active attack campaigns.</p>
+            <p>Best Practices for Email Records</p>
+            <p>Implement all three SPF, DKIM, and DMARC. Any comprehensive email authentication strategy will use at least these three to maximize protection. Monitoring and updating regularly to evolving threats which means updating your records whenever necessary. As always, you will want to educate stakeholders. Train employees to recognize phishing attempts, as no system is foolproof.</p>
+            <p>These records are the cornerstone of email security. After reading this blog and implementing SPF, DKIM, and DMARC, your teams and organization will significantly reduce their risk to phishing and spam, safeguarding both brand reputation and users. With these configurations in place, email becomes a more secure and reliable communication channel for everyone. Even if it&rsquo;s as old as the dinosaours.</p>
+        </section>
+        <section>
             <a href="#azure_network_security"><h3>Creating Secure Networks in Your Azure Environment</h3></a>
             <h4>Nov 24th, 2024</h4>
             <img src="Network.gif">
